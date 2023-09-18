@@ -63,7 +63,7 @@ const App = () => {
   
   return (
     <div className="App">
-      <h1>Tic Tac Toe</h1>
+      <h1 className='title'>Tic Tac Toe</h1>
       <div className="board">
         {squares.map((value, i)=> (
           <button key={i} className="square" onClick={() => handleSquareClick(i)} disabled={value || winner}>
@@ -74,7 +74,7 @@ const App = () => {
       <div className="status"> 
         {getStatusMessage()}
       </div>
-      <button onClick={handleRestartClick}> 
+      <button className="reset-button" onClick={handleRestartClick}> 
           Restart Game
       </button>
     </div>
