@@ -58,14 +58,31 @@ There is an interesting approach to the [Tic Tac Toe win condition in React](htt
 
 ### 📚 User Stories
 
-- As a user, I can see a three by three grid game board on the page.
-- As a user, I can click on a square to mark it.
-- As a user, my partner can click on a square after me and see their mark.
-- As a user, I can't click on a square that has already been marked.
-- As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally), I can see a notice telling me which player won.
-- As a user, I can't play the game after the game has been won.
+- As a user, I can see a three by three grid game board on the page. ~ Done
+    -On square.js we set up a square. The array helped determine how many boxes there is supposed to be, for example the array had a length of 9, so we used that to create 9 boxes. 
+
+- As a user, I can click on a square to mark it. ~ Done
+    -We named our function handleSquareClick and renderSquares. Create button and onClick.  
+
+- As a user, my partner can click on a square after me and see their mark. ~ Done
+    - setState and onClick to change turns. 
+
+- As a user, I can't click on a square that has already been marked. ~ Done
+    - If the user already clicked on the square then the block is disabled. 
+
+- As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally), I can see a notice telling me which player won. ~ Done
+    - The winner was first set to null in the state variable. After applying a conditional statement. If the first player has three matching letters then it would return the new state variable in string interpolation. It was then all saved in a function. 
+
+- As a user, I can't play the game after the game has been won. ~ Done
+    - It also stops in the same 
+    
 - As a user, if there are no more squares available, I can see a notice telling me that the game has ended.
 - As a user, I can click on a restart button that will clear the game board.
+
+Pseudocode: 
+Input: Array, state and setStates
+Output: A desktop game that shows tic tac toe screen. 3x3 box. 
+Process: Iterated through an array with a combination of numbers to get number of boxes. Made every box a button using a .map() method. Then we changed the setStates to be X's and O's. Everytime we press box, the X will change to O and vice versa. We created a function named getStatusMessage to determine winner or draw. A conditional to check if winner has made three in a row. Then we styled using CSS. 
 
 ### 🏔 Stretch Goals
 

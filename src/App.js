@@ -25,19 +25,18 @@ const App = () => {
       }
     }
 
-    if (areAllSquaresFilled(squares)) {
-      return "draw";
-    }
-
     return null;
   };
 
+    const areAllSquaresFilled = (squares)=>{
+      return squares.every(square => square !== null);
+    }
  
-  };
+  
 
   const getStatusMessage = () => {
     if (winner) {
-      return `${winner}`;
+      return `Winner ${winner}!`;
     } else if (areAllSquaresFilled(squares)) {
       return "It's a draw!";
     } else {
@@ -68,10 +67,20 @@ const App = () => {
     setWinner(null);
   };
 
- 
+  const renderSquares = () => 
+    squares.map((value, i) => (
+      <button key={i} className="square" onClick={() => handleSquareClick(i)} disabled={value||winner}> {value} </button>
+    ))
+
 
   return (
-   
+   <div className="App">
+    <h1 className="title"> Tic Tac Toe </h1>
+    <img src = "https://live.staticflickr.com/1567/26011620511_91daefde0e_b.jpg" width={110} height={120}/>
+    <div className="board">{renderSquares()}</div>
+    <div className="status"> {getStatusMessage()}</div>
+    <button className="reset-button" onClick={handleRestartClick}> Restart Game </button>
+   </div>
   );
 };
 
