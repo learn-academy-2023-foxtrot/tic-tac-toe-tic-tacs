@@ -1,5 +1,22 @@
-.square {
+
+
+.title {
+  display: flex;
+  text-align: center;
+}
+
+.square { 
+  display: flex;
+  margin: auto;
+  flex-flow: column wrap;
   border: 2px solid black;
   height: 100px;
   width: 100px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  
+}
+
+.reset-button {
+  cursor: pointer;
 }
