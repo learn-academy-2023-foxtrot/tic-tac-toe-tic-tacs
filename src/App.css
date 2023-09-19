@@ -1,19 +1,62 @@
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2016/05/27/22/58/tic-tacs-1420767_1280.jpg");
+  background-size: cover;
+}
 
-
-.title {
-  display: flex;
+.App {
   text-align: center;
 }
+
+.title {
+  background-color: aqua;
+  font-family: 'Pacifico', cursive;
+  width: 200px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3,100px);
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.status {
+  margin: 20px 0;
+  font-size: 100px;
+  background-color: aqua;
+}
+
 
 .square { 
   display: flex;
   margin: auto;
-  flex-flow: column wrap;
-  border: 2px solid black;
   height: 100px;
   width: 100px;
+<<<<<<< HEAD
+  border: 2px solid black;
+  font-size: 80px;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+=======
+>>>>>>> a54cf3ec130a8db5e4c5430a72a1e2675ce5503c
 }
 
 .reset-button {
   cursor: pointer;
+  background-color: aqua;
+  border: 2px solid black;
+  border-radius: 30px;
+  height: 60px;
+  width: 100px;
+  transition: background-color 0.5s ease;
+}
+
+.reset-button:hover{
+  background-color: blue;
 }
