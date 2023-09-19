@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React  from 'react';
 import './App.css';
 
 const App = () => {
@@ -32,8 +32,7 @@ const App = () => {
     return null;
   };
 
-  const areAllSquaresFilled = (squares) => {
-    return squares.every((square) => square !== null);
+
   };
 
   const getStatusMessage = () => {
@@ -46,47 +45,13 @@ const App = () => {
     }
   };
 
-  const handleSquareClick = (i) => {
-    if (squares[i] || winner) {
-      return;
-    }
-
-    const newSquares = [...squares];
-    newSquares[i] = currentPlayer;
-    setSquares(newSquares);
-
-    const newWinner = calculateWinner(newSquares);
-    if (newWinner) {
-      setWinner(newWinner);
-    } else {
-      setCurrentPlayer(currentPlayer === "X" ? "O" : "X");
-    }
-  };
-
-  const handleRestartClick = () => {
-    setSquares(Array(9).fill(null));
-    setCurrentPlayer("X");
-    setWinner(null);
-  };
-
-  const renderSquares = () =>
-    squares.map((value, i) => (
-      <button
-        key={i}
-        className="square"
-        onClick={() => handleSquareClick(i)}
-        disabled={value || winner}
-      >
-        {value}
-      </button>
-    ));
-
+ 
   return (
     <div className="App">
       <h1 className="title">Tic Tac Toe</h1>
-      <div className="board">{renderSquares()}</div>
-      <div className="status">{getStatusMessage()}</div>
-      <button className="reset-button" onClick={handleRestartClick}>
+      <div className="board"></div>
+      <div className="status"></div>
+      <button className="reset-button">
         Restart Game
       </button>
     </div>
