@@ -5,7 +5,7 @@ const App = () => {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [currentPlayer, setCurrentPlayer] = useState("X");
   const [winner, setWinner] = useState(null);
-  const [player, setPlayer] = useState("player")
+ 
 
   const calculateWinner = (squares) => {
     const winningCombinations = [
