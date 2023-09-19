@@ -37,11 +37,14 @@ body {
   margin: auto;
   height: 100px;
   width: 100px;
+<<<<<<< HEAD
   border: 2px solid black;
   font-size: 80px;
   justify-content: center;
   background-color: white;
   border-radius: 10px;
+=======
+>>>>>>> a54cf3ec130a8db5e4c5430a72a1e2675ce5503c
 }
 
 .reset-button {
