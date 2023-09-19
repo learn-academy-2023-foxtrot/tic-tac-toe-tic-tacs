@@ -74,10 +74,15 @@ There is an interesting approach to the [Tic Tac Toe win condition in React](htt
     - The winner was first set to null in the state variable. After applying a conditional statement. If the first player has three matching letters then it would return the new state variable in string interpolation. It was then all saved in a function. 
 
 - As a user, I can't play the game after the game has been won. ~ Done
-    - It also stops in the same 
+    - Once the conditional statement finds the winner it will end at the return keyword which stops the flow of the code.
     
 - As a user, if there are no more squares available, I can see a notice telling me that the game has ended.
+We succesfully made this feature using a function called handlClick that creates a variable that holds an anonymous function that lets the use know if they have 
+won or lost using a ternary operato.
+
 - As a user, I can click on a restart button that will clear the game board.
+    The user is able to restart the game because there is a function that takes in all three state variables and sets them back to their original starting state once the reset button is clicked. 
+
 
 Pseudocode: 
 Input: Array, state and setStates
@@ -87,7 +92,9 @@ Process: Iterated through an array with a combination of numbers to get number o
 ### 🏔 Stretch Goals
 
 - As a user, I can see pleasant stylings on the application.
+    Inside our App.css file there is a wide variety of css selectors that use flex box elements to manevour our titles, squares, and buttons to the center of the page. We also use dynamic css properties like transition, border-radius, and hover to make the webiste feel more engaging.
 - As a user, I can see a notification that informs me whether it is currently my partner or my turn.
+
 - As a user, I can choose my marker from a predetermined list (X, O, a color, an emoji, etc...).
 
 ### 👩‍💻 Developer Stretch Goals

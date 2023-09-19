@@ -5,6 +5,7 @@ const App = () => {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [currentPlayer, setCurrentPlayer] = useState("X");
   const [winner, setWinner] = useState(null);
+  const [player, setPlayer] = useState("player")
 
   const calculateWinner = (squares) => {
     const winningCombinations = [
@@ -57,7 +58,7 @@ const App = () => {
     if (newWinner) {
       setWinner(newWinner);
     } else {
-      setCurrentPlayer(currentPlayer === "X" ? "O" : "X");
+      setCurrentPlayer(currentPlayer === "X" ? "0" : "X");
     }
   };
 
@@ -73,12 +74,13 @@ const App = () => {
     ))
 
 
+
   return (
    <div className="App">
     <h1 className="title"> Tic Tac Toe </h1>
     <img src = "https://live.staticflickr.com/1567/26011620511_91daefde0e_b.jpg" width={110} height={120}/>
     <div className="board">{renderSquares()}</div>
-    <div className="status"> {getStatusMessage()}</div>
+    <div className="status"> {getStatusMessage()} </div>
     <button className="reset-button" onClick={handleRestartClick}> Restart Game </button>
    </div>
   );
