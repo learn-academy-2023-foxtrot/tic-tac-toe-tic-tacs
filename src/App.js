@@ -1,5 +1,5 @@
-import React  from 'react';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 const App = () => {
   const [squares, setSquares] = useState(Array(9).fill(null));
@@ -32,7 +32,7 @@ const App = () => {
     return null;
   };
 
-
+ 
   };
 
   const getStatusMessage = () => {
@@ -45,17 +45,34 @@ const App = () => {
     }
   };
 
+  const handleSquareClick = (i) => {
+    if (squares[i] || winner) {
+      return;
+    }
+
+    const newSquares = [...squares];
+    newSquares[i] = currentPlayer;
+    setSquares(newSquares);
+
+    const newWinner = calculateWinner(newSquares);
+    if (newWinner) {
+      setWinner(newWinner);
+    } else {
+      setCurrentPlayer(currentPlayer === "X" ? "O" : "X");
+    }
+  };
+
+  const handleRestartClick = () => {
+    setSquares(Array(9).fill(null));
+    setCurrentPlayer("X");
+    setWinner(null);
+  };
+
  
+
   return (
-    <div className="App">
-      <h1 className="title">Tic Tac Toe</h1>
-      <div className="board"></div>
-      <div className="status"></div>
-      <button className="reset-button">
-        Restart Game
-      </button>
-    </div>
+   
   );
 };
 
-export default App;
+export default App

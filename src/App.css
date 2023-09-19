@@ -1,4 +1,7 @@
-
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2016/05/27/22/58/tic-tacs-1420767_1280.jpg");
+  background-size: cover;
+}
 
 .title {
   display: flex;
@@ -8,13 +11,10 @@
 .square { 
   display: flex;
   margin: auto;
-  flex-flow: column wrap;
   border: 2px solid black;
   height: 100px;
-  width: 100px;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  
+  width: 100px; 
+  justify-content: right;
 }
 
 .reset-button {
